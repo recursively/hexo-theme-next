@@ -177,6 +177,14 @@
       {%- endif %}
 
       {%- if is_index %}
+        {%- if post.images %}
+        <div class="out-img-topic nofancybox">
+            {%- for image in post.images %}
+              <img src="{{ image }}" class="img-topic nofancybox">
+            {%- endfor %}
+        </div>
+        {%- endif %}
+
         {%- if post.description and theme.excerpt_description %}
           <p>{{ post.description }}</p>
           <!--noindex-->
